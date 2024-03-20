@@ -199,7 +199,6 @@ h1 {
 
 .error {
     width: 30%;
-    /* height: 70px; */
     padding: 16px 24px;
     background-color: var(--alert-bg);
     border-radius: 16px;
@@ -247,8 +246,8 @@ h1 {
     .menu {
         margin-top: 20px;
         height: 46px;
-        justify-content: space-evenly;
-        gap: 16px;
+        justify-content: flex-start;
+        gap: 24px;
     }
 
     .menu h1 {
@@ -279,6 +278,11 @@ h1 {
     h1 {
         display: none;
     }
+
+    .error {
+        width: 90%;
+        left: 0;
+    }
 }
 
 @media (max-width: 432px) {
@@ -296,5 +300,11 @@ h1 {
     
     .btn-wrap {
         flex-wrap: wrap;
+    }
+
+    .error {
+        width: 85%;
+        top: 55%; 
+        left: 0;
     }
 }
