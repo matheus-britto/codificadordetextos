@@ -262,7 +262,7 @@ h1 {
     
     .input-section {
         grid-column: 2;
-        height: calc(100vh - 106px);
+        height: calc(100dvh - 106px);
         padding-bottom: 24px;
     }
     
