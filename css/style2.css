@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+:root {
+    --inter: "Inter", sans-serif;
+    --play: "Play", sans-serif;
+    --bg-color: #f3f5fc;
+    --accent: #0a3871;
+    --text-color-primary: #343a40;
+    --text-color-secondary: #495057;
+    --alert-bg: #FECACA;
+    --alert-text: #450A0A;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.site {
+    min-height: 100dvh;
+    display: grid;
+    /* grid-template-rows: 1fr minmax(0, 80%) 1fr; */
+    /* grid-template-columns: 1fr 120px minmax(0, 40%) 400px 1fr; */
+
+    font-family: var(--inter);
+    column-gap: 80px;
+    grid-template-areas: 
+        ". navbar navbar navbar output-section"
+        ". input-section output-section"
+    ;
+}
+
+.menu {
+    grid-area: navbar;
+    /* grid-column: 2 / 3; */
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+h1 {
+    /* grid-column: 3; */
+    font-family: var(--play);
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--accent);
+    align-self: center;
+}
+
+.grid-section {
+    /* grid-column: 3 / 5; */
+}
+
+.input-section {
+    grid-area: input-section;
+    /* grid-column: 3 / 4; */
+    /* grid-row: 2 / 3; */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+
+}
+
+.input-section p {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--text-color-secondary);
+}
+
+.input-section i {
+    margin-right: 8px;
+} 
+
+.btn-wrap {
+    display: flex;
+    gap: 24px;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    padding: 2.4rem;
+    border: 2px solid var(--accent);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn--default {
+    background: var(--accent);
+    color: white;
+}
+
+.btn:disabled{
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn__text {
+    font-size: 1.6rem;
+}
+
+.text-input {
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 16px;
+    font-size: 3.2rem;
+    color: var(--accent);
+}
+
+.text-input::placeholder {
+    color: var(--accent);
+    opacity: 1;
+    font-family: var(--inter);
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.text-input:focus {
+    box-shadow: 0 0 4px #719ece;
+}
+
+.output-section {
+    grid-area: output-section;
+    /* grid-column: 4 / 5; */
+    /* grid-row: 1 / 4; */
+    margin: 40px 0;
+    background-color: white;
+    padding: 3.2rem 3.2rem 3.4rem;
+    border-radius: 32px;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent), transparent 90%);
+    display: flex;
+    align-items: center;
+}
+
+.output--default {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.output--default img {
+    margin-bottom: 32px;
+}
+
+.output--default h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.output--default p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    text-align: center;
+}
+
+.output--print {
+    align-self: flex-start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.output--print p{
+    font-size: 2.4rem;
+    line-height: 130%;
+    margin-bottom: 16px;
+}
+
+.output--print button {
+    margin-block-start: auto;
+}
+
+.error {
+    width: 30%;
+    /* height: 70px; */
+    padding: 16px 24px;
+    background-color: var(--alert-bg);
+    border-radius: 16px;
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--alert-bg), transparent 50%);
+    border: 2px solid color-mix(in srgb, var(--alert-text), transparent 80%);
+    display: none;
+}
+
+.error.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error i {
+    margin-right: 8px;
+    font-size: 1.8rem;
+}
+
+.error__msg {
+    font-size: 1.8rem;
+    color: var(--alert-text);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.red {
+    color: var(--alert-text);
+}
