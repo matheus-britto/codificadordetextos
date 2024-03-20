@@ -198,12 +198,12 @@ h1 {
 }
 
 .error {
-    width: 30%;
+    width: 50%;
     padding: 16px 24px;
     background-color: var(--alert-bg);
     border-radius: 16px;
     position: absolute;
-    left: 30%;
+    left: 25%;
     top: 70%;
     transform: translate(-50%);
     box-shadow: 0 0 20px color-mix(in srgb, var(--alert-bg), transparent 50%);
