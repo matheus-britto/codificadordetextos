@@ -281,7 +281,7 @@ h1 {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 428px) {
     .menu img {
         width: 7%;
     }
