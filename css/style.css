@@ -281,7 +281,7 @@ h1 {
     }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 432px) {
     .menu img {
         width: 7%;
     }
@@ -297,5 +297,4 @@ h1 {
     .btn-wrap {
         flex-wrap: wrap;
     }
-    
 }
